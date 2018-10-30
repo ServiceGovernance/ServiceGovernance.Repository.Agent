@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceGovernance.Repositor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceGovernance.Repository.Agent.Tests", "tests\ServiceGovernance.Repository.Agent.Tests\ServiceGovernance.Repository.Agent.Tests.csproj", "{8596DA4C-A67C-4D5F-B625-41F61EE8F782}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{13395F9E-0F7E-46AF-9D12-E933FB3D24ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api1", "samples\Api1\Api1.csproj", "{366C301D-6838-434C-8003-9B43B0170999}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{8596DA4C-A67C-4D5F-B625-41F61EE8F782}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8596DA4C-A67C-4D5F-B625-41F61EE8F782}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8596DA4C-A67C-4D5F-B625-41F61EE8F782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366C301D-6838-434C-8003-9B43B0170999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366C301D-6838-434C-8003-9B43B0170999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366C301D-6838-434C-8003-9B43B0170999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366C301D-6838-434C-8003-9B43B0170999}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{366C301D-6838-434C-8003-9B43B0170999} = {13395F9E-0F7E-46AF-9D12-E933FB3D24ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4C93275-32E7-4A9F-A2E4-6577A741A4B7}

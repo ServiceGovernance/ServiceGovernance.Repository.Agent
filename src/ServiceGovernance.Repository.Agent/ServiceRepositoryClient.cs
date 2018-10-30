@@ -2,6 +2,7 @@
 using ServiceGovernance.Repository.Agent.Configuration;
 using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace ServiceGovernance.Repository.Agent
 {
@@ -21,6 +22,15 @@ namespace ServiceGovernance.Repository.Agent
             _options = options ?? throw new ArgumentNullException(nameof(options));
             _httpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        }
+
+        /// <summary>
+        /// Publishes the API to the service repository
+        /// </summary>
+        /// <returns></returns>
+        public async Task PublishServiceApiAsync()
+        {
+
         }
     }
 }

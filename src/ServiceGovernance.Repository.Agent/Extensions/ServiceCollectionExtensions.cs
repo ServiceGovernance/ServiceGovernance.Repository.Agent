@@ -66,6 +66,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 client.DefaultRequestHeaders.Add("User-Agent", $"ServiceRepositoryClient - {Assembly.GetExecutingAssembly().GetName().Version} - {options.ServiceIdentifier}");
             });
 
+            services.AddMvcCore().AddApiExplorer();
+
             return services;
         }
     }

@@ -23,11 +23,8 @@ namespace Microsoft.AspNetCore.Builder
             var lifetime = app.ApplicationServices.GetRequiredService<IApplicationLifetime>();
             var client = app.ApplicationServices.GetRequiredService<IServiceRepositoryClient>();
 
-            //// register service when it's running
-            //lifetime.ApplicationStarted.Register(() => client.RegisterService());
-
-            //// remove registration when service is shutting down
-            //lifetime.ApplicationStopping.Register(() => client.UnregisterService());
+            // publish service's api when it's running
+            lifetime.ApplicationStarted.Register(() => client.PublishServiceApiAsync());            
 
             return app;
         }
