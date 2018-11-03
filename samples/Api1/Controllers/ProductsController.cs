@@ -12,7 +12,7 @@ namespace Api1.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> Get()
         {
-            return new[] { new Product { }, new Product { } };
+            return new[] { new Product(), new Product() };
         }
 
         // GET api/values/5

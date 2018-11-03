@@ -49,11 +49,11 @@ namespace Microsoft.AspNetCore.Builder
             {
                 var serviceProvider = scope.ServiceProvider;
 
-                TestService(serviceProvider, typeof(IApiDescriptionProvider), logger, "No Api description provider specified. Provide an implementation for 'IApiDescriptionProvider' (e.g. ServiceGovernance.Repository.Agent.SwaggerV3).");
+                serviceProvider.TestService(typeof(IApiDescriptionProvider), logger, "No Api description provider specified. Provide an implementation for 'IApiDescriptionProvider' (e.g. ServiceGovernance.Repository.Agent.SwaggerV3).");
             }
         }
 
-        internal static object TestService(IServiceProvider serviceProvider, Type service, ILogger logger, string message)
+        internal static object TestService(this IServiceProvider serviceProvider, Type service, ILogger logger, string message)
         {
             var appService = serviceProvider.GetService(service);
 

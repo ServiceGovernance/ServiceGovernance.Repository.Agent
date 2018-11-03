@@ -5,13 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="2.2.0" />
-    <PackageReference Include="ServiceGovernance.Registry.Agent" Version="0.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />    
+    <PackageReference Include="ServiceGovernance.Repository.Agent.SwaggerV3" Version="*" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="3.0.0" />
   </ItemGroup>
 

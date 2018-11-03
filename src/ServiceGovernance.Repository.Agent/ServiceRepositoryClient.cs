@@ -43,7 +43,7 @@ namespace ServiceGovernance.Repository.Agent
             var client = _httpClientFactory.CreateClient(HTTPCLIENT_NAME);
 
             try
-            {               
+            {
                 var response = client.PostAsync("v1/api/" + Uri.EscapeUriString(_options.ServiceIdentifier), content).GetAwaiter().GetResult();
                 response.EnsureSuccessStatusCode();
 
@@ -64,7 +64,7 @@ namespace ServiceGovernance.Repository.Agent
                 var apiWriter = new OpenApiJsonWriter(writer);
                 document.SerializeAsV3(apiWriter);
                 apiWriter.Flush();
-                writer.Flush();                
+                writer.Flush();
             }
 
             stream.Position = 0;
