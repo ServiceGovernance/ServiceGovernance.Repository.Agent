@@ -21,7 +21,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// or
         /// setupBuilder
         /// </exception>
-        public static IServiceCollection AddServiceRepositoryAgent(this IServiceCollection services, Action<RepositoryAgentOptions> setupBuilder)
+        public static IServiceRepositoryAgentBuilder AddServiceRepositoryAgent(this IServiceCollection services, Action<RepositoryAgentOptions> setupBuilder)
         {
             if (services == null)
                 throw new ArgumentNullException(nameof(services));
@@ -46,7 +46,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// or
         /// options
         /// </exception>
-        public static IServiceCollection AddServiceRepositoryAgent(this IServiceCollection services, RepositoryAgentOptions options)
+        public static IServiceRepositoryAgentBuilder AddServiceRepositoryAgent(this IServiceCollection services, RepositoryAgentOptions options)
         {
             if (services == null)
                 throw new ArgumentNullException(nameof(services));
@@ -65,10 +65,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
                 client.DefaultRequestHeaders.Add("User-Agent", $"ServiceRepositoryClient - {Assembly.GetExecutingAssembly().GetName().Version} - {options.ServiceIdentifier}");
             });
-
-            services.AddMvcCore().AddApiExplorer();
-
-            return services;
+            
+            return new ServiceRepositoryAgentBuilder(services);
         }
     }
 }

@@ -11,6 +11,6 @@ namespace ServiceGovernance.Repository.Agent
         /// Publishes the API to the service repository
         /// </summary>
         /// <returns></returns>
-        Task PublishServiceApiAsync();
+        void PublishServiceApi();
     }
 }
